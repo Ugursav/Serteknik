@@ -6,12 +6,13 @@ const {
 
 const ORIGIN = 'https://serteknik.elektrik.workers.dev';
 const HELPER = 'com.google.androidbrowserhelper:androidbrowserhelper:2.7.4';
+// Android string resources treat unescaped quotes as delimiters; preserve JSON quotes for AAPT.
 const ASSET_STATEMENT = JSON.stringify([
   {
     relation: ['delegate_permission/common.handle_all_urls'],
     target: { namespace: 'web', site: ORIGIN },
   },
-]);
+]).replace(/"/g, '\\"');
 
 function withTwaDependency(config) {
   return withAppBuildGradle(config, (mod) => {

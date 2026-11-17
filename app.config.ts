@@ -62,7 +62,7 @@ const publicRuntime = {
 const config: ExpoConfig = {
   name: env.appName,
   slug: env.appSlug,
-  version: "1.0.4",
+  version: "1.0.5",
   extra: {
     ...publicRuntime,
     eas: { projectId: "69670d1e-7202-47c8-84f9-9bfb744b6681" },
@@ -87,7 +87,7 @@ const config: ExpoConfig = {
     },
     predictiveBackGestureEnabled: false,
     package: env.androidPackage,
-    versionCode: 5,
+    versionCode: 6,
     permissions: ["CAMERA"],
     blockedPermissions: ["android.permission.RECORD_AUDIO", "android.permission.READ_MEDIA_AUDIO", "android.permission.READ_MEDIA_VIDEO"],
     softwareKeyboardLayoutMode: "resize",
@@ -114,6 +114,7 @@ const config: ExpoConfig = {
     "expo-asset",
     "expo-router",
     "expo-sharing",
+    "expo-video",
     ["expo-image-picker", {photosPermission: "Fiş ve ürün görsellerini galeriden seçmek için izin gerekir.",cameraPermission: "Fiş ve ürün fotoğrafı çekmek için kamera izni gerekir.",microphonePermission:false}],
     [
       "expo-splash-screen",
